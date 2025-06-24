@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO e Metadados -->
+    <title>Funil Turbo IA – Guia Prático de Automação com Inteligência Artificial</title>
+    <meta name="description" content="Crie um Funil de Marketing que Roda Sozinho Usando Inteligência Artificial — Mesmo Sem Equipe ou Experiência Técnica.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Funil Turbo IA – Guia Prático de Automação com IA">
+    <meta property="og:description" content="Descubra o método prático para automatizar conteúdo, anúncios e vendas com IA e atrair clientes todos os dias no piloto automático.">
+    <!-- Substitua pela URL da sua imagem para compartilhamento -->
+    <meta property="og:image" content="https://placehold.co/1200x630/0A192F/64FFDA?text=Funil+Turbo+IA">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Funil Turbo IA – Guia Prático de Automação com IA">
+    <meta name="twitter:description" content="Descubra o método prático para automatizar conteúdo, anúncios e vendas com IA e atrair clientes todos os dias no piloto automático.">
+    <!-- Substitua pela URL da sua imagem para Twitter -->
+    <meta name="twitter:image" content="https://placehold.co/1200x630/0A192F/64FFDA?text=Funil+Turbo+IA">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Integrado -->
+    <style>
+        :root {
+            --navy-blue: #0A192F;
+            --light-navy: #172A45;
+            --white: #FFFFFF;
+            --light-slate: #CCD6F6;
+            --slate: #8892b0;
+            --cyan-accent: #64FFDA;
+            --lime-green-accent: #39FF14;
+            --title-font: 'Anton', sans-serif;
+            --body-font: 'Poppins', sans-serif;
+        }
+
+        /* --- Reset e Estilos Globais --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--body-font);
+            background-color: var(--navy-blue);
+            color: var(--slate);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- Estrutura e Utilitários --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+        
+        .section {
+             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-family: var(--title-font);
+            color: var(--light-slate);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.2;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 15px;
+        }
+        
+        .section-title h2 .highlight {
+            color: var(--cyan-accent);
+        }
+        
+        .section-title .divider {
+            width: 80px;
+            height: 4px;
+            background-color: var(--cyan-accent);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        /* --- Botão CTA --- */
+        .cta-button {
+            display: inline-block;
+            padding: 18px 35px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-primary {
+            background-color: var(--cyan-accent);
+            color: var(--navy-blue);
+            border-color: var(--cyan-accent);
+        }
+
+        .cta-primary:hover {
+            background-color: transparent;
+            color: var(--cyan-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(100, 255, 218, 0.3);
+        }
+        
+        .cta-final {
+            background-color: var(--lime-green-accent);
+            color: var(--navy-blue);
+            border-color: var(--lime-green-accent);
+            text-transform: uppercase;
+            font-size: 1.4rem;
+        }
+        
+        .cta-final:hover {
+            background-color: transparent;
+            color: var(--lime-green-accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(57, 255, 20, 0.4);
+        }
+
+        /* --- Seção Hero --- */
+        .hero {
+            padding: 60px 0 80px;
+            text-align: center;
+        }
+        .hero__logo-container {
+            margin-bottom: 40px;
+        }
+        .hero__logo {
+            max-width: 160px;
+            height: auto;
+        }
+        .hero__title {
+            font-family: var(--title-font);
+            color: var(--light-slate);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.2;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            max-width: 900px;
+            margin: 0 auto 20px;
+        }
+         .hero__title .highlight {
+            color: var(--cyan-accent);
+        }
+        .hero__subtitle {
+            font-size: 1.25rem;
+            color: var(--light-slate);
+            max-width: 750px;
+            margin: 0 auto 40px;
+        }
+        .hero__mockup {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            margin: 20px auto;
+            background: var(--light-navy);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--cyan-accent);
+            border: 1px solid var(--cyan-accent);
+        }
+
+        /* --- Seção Benefícios --- */
+        #benefits {
+            background-color: var(--light-navy);
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .benefit-card {
+            background-color: var(--navy-blue);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            border-color: var(--cyan-accent);
+        }
+        .benefit-card__icon { width: 48px; height: 48px; margin-bottom: 20px; color: var(--cyan-accent); }
+        .benefit-card h3 { font-family: 'Poppins', sans-serif; text-transform: none; font-size: 20px; font-weight: 700; color: var(--light-slate); margin-bottom: 10px; }
+        
+        /* --- Seção Antes e Depois --- */
+        .transformation__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .transformation-card { padding: 30px; border-radius: 16px; background: var(--light-navy); }
+        .transformation-card h3 { font-family: var(--title-font); font-size: 1.8rem; letter-spacing: 2px; text-align: center; margin-bottom: 25px; }
+        .transformation-card--before h3 { color: #ff7575; }
+        .transformation-card--after h3 { color: var(--lime-green-accent); }
+        .transformation-card ul { list-style: none; }
+        .transformation-card li { margin-bottom: 15px; font-size: 1.1rem; display: flex; align-items: flex-start; gap: 12px; }
+        .transformation-card li svg { width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px; }
+        .transformation-card--before li { color: var(--slate); }
+        .transformation-card--before li svg { color: #ff7575; }
+        .transformation-card--after li { font-weight: 600; color: var(--light-slate); }
+        .transformation-card--after li svg { color: var(--lime-green-accent); }
+        .transformation__conclusion {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .transformation__conclusion p {
+            font-size: 1.2rem;
+            color: var(--light-slate);
+            margin-bottom: 20px;
+        }
+        .transformation__conclusion strong {
+            color: var(--cyan-accent);
+            font-weight: 700;
+        }
+
+        /* --- SEÇÃO AUTOR (NOVO ESTILO ADAPTADO PARA TEMA ESCURO) --- */
+        .author { background-color: var(--navy-blue); }
+        .author__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .author__info .bio-card { background: var(--light-navy); padding: 40px; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0, 0.3); position: relative; border: 1px solid rgba(100, 255, 218, 0.2); }
+        .author__info .bio-card__quote-icon { position: absolute; top: -20px; left: -20px; color: var(--cyan-accent); opacity: 0.05; width: 60px; height: 60px; }
+        .author__info h3 { font-family: 'Poppins', sans-serif; text-transform: none; font-size: 32px; font-weight: 700; color: var(--light-slate); margin-bottom: 15px; }
+        .author__info .bio-card p { margin-bottom: 30px; font-size: 1.1rem; color: var(--slate); }
+        .author__info .bio-card strong { color: var(--cyan-accent); font-weight: 700; }
+        .author__info .bio-card strong.green { color: var(--lime-green-accent); }
+        .credentials { list-style: none; display: flex; flex-direction: column; gap: 15px; }
+        .credentials li { display: flex; align-items: center; gap: 15px; font-weight: 600; color: var(--light-slate); }
+        .credentials li .icon { width: 24px; height: 24px; }
+        .credentials li .icon-cyan { color: var(--cyan-accent); }
+        .credentials li .icon-green { color: var(--lime-green-accent); }
+        .author__photo-container { position: relative; display: flex; align-items: center; justify-content: center; }
+        .author__photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 6px solid var(--light-navy);
+            background: var(--navy-blue);
+            box-shadow: 0 0 0 8px var(--cyan-accent), 0 10px 40px rgba(100, 255, 218, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cyan-accent);
+            font-size: 20px;
+            font-weight: bold;
+            overflow: hidden;
+        }
+        
+        /* --- Seção Oferta --- */
+        #offer .container { max-width: 800px; }
+        .offer-box { background: var(--light-navy); padding: 40px; border-radius: 10px; text-align: center; border: 2px solid var(--cyan-accent); box-shadow: 0 0 40px rgba(100, 255, 218, 0.2); }
+        .offer-box h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .price-wrapper { margin: 20px 0 30px; }
+        .price { font-family: var(--title-font); font-size: 6rem; color: var(--white); line-height: 1; }
+        .price .symbol { font-size: 2.5rem; vertical-align: super; margin-right: 5px; color: var(--cyan-accent); }
+        .deliverables-list { list-style: none; margin: 30px auto; max-width: 450px; text-align: left; }
+        .deliverables-list li { display: flex; align-items: center; font-size: 1.1rem; margin-bottom: 15px; color: var(--light-slate); }
+        .deliverables-list svg { width: 24px; height: 24px; color: var(--lime-green-accent); margin-right: 15px; flex-shrink: 0; }
+        .guarantee-box { margin-top: 30px; color: var(--slate); }
+        .guarantee-box svg { color: var(--cyan-accent); margin: 0 auto 10px; display: block; width: 40px; height: 40px; }
+        .guarantee-box h3 { font-family: 'Poppins', sans-serif; text-transform: none; font-size: 1.2rem; color: var(--light-slate); }
+
+        /* --- Seção CTA Final --- */
+        #final-cta .container { text-align: center; }
+        #final-cta h2 { max-width: 700px; margin-left: auto; margin-right: auto; }
+        #final-cta .cta-final { margin-top: 30px; }
+        .urgency-text { margin-top: 20px; font-size: 1rem; color: #ffc107; font-weight: 700; }
+
+        /* --- Footer --- */
+        footer { text-align: center; padding: 40px 20px; background-color: #020c1b; font-size: 0.9rem; }
+        footer p { margin: 0; color: var(--slate); }
+
+        /* --- Responsividade --- */
+        @media (max-width: 992px) {
+            .author__grid { grid-template-columns: 1fr; text-align: center; }
+            .credentials { justify-content: center; align-items: center; }
+            .author__photo-container { margin-top: 80px; }
+        }
+        @media (max-width: 768px) {
+            .container { padding: 60px 20px; }
+            .hero__title { font-size: 36px; }
+            .section-title h2 { font-size: 32px; }
+            .transformation__grid { grid-template-columns: 1fr; gap: 30px; }
+            .price { font-size: 5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Seção Hero -->
+    <header class="hero container">
+        <div class="hero__logo-container">
+            <img src="assets/images/logo.png" alt="Logo Funil Turbo IA" class="hero__logo">
+        </div>
+        <h1 class="hero__title">
+            Crie um Funil de Marketing que Roda Sozinho Usando <span class="highlight">Inteligência Artificial</span>
+        </h1>
+        <p class="hero__subtitle">Descubra o método prático para automatizar conteúdo, anúncios e vendas com IA e atrair clientes todos os dias no piloto automático.</p>
+        <div class="hero__mockup">[IMAGEM: Mockup 3D do eBook]</div>
+        <a href="#offer" class="cta-button cta-primary">Quero Automatizar Meu Marketing Agora!</a>
+    </header>
+
+    <main>
+        <!-- Seção de Benefícios -->
+        <section id="benefits" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>O Que Você Vai <span class="highlight">Aprender</span> Com Este Guia?</h2>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <svg class="benefit-card__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        <h3>Conteúdo em Segundos</h3>
+                        <p>Como usar IA para criar conteúdo de alto valor, acabando com o bloqueio criativo.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <svg class="benefit-card__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <h3>Anúncios que Convertem</h3>
+                        <p>Os prompts certos para gerar textos e imagens para anúncios que realmente trazem clientes.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <svg class="benefit-card__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <h3>Ferramentas Inteligentes</h3>
+                        <p>Uma lista curada de ferramentas que fazem o trabalho pesado e repetitivo por você.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <svg class="benefit-card__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <h3>Automação Completa</h3>
+                        <p>Automatize e-mails, posts em redes sociais e até o primeiro atendimento ao cliente.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <svg class="benefit-card__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h3>Funil 100% Autônomo</h3>
+                        <p>O passo a passo para montar seu primeiro funil de vendas 100% automatizado.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <svg class="benefit-card__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        <h3>Análise de Dados Simplificada</h3>
+                        <p>Transforme números em insights para otimizar suas estratégias sem ser um expert.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Antes e Depois -->
+        <section id="transformation" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Sua <span class="highlight">Transformação</span> Digital</h2>
+                </div>
+                <div class="transformation__grid">
+                    <div class="transformation-card transformation-card--before">
+                        <h3>ANTES (Modo Manual)</h3>
+                        <ul>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Dependente de agência ou freelancer</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Sem tempo para produzir conteúdo</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Anúncios que não funcionam</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>Rede social desorganizada</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>E-mails manuais ou inexistentes</li>
+                        </ul>
+                    </div>
+                    <div class="transformation-card transformation-card--after">
+                        <h3>DEPOIS (Com IA)</h3>
+                         <ul>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Cria e gerencia tudo com IA</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Conteúdo gerado com um prompt</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Anúncios otimizados com inteligência</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Posts e interações automatizadas</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Sequência de e-mails 100% automática</li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="transformation__conclusion">
+                    <p>Qual lado você escolhe?</p>
+                    <p><strong>Transforme seu marketing hoje mesmo com o poder da Inteligência Artificial.</strong></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Autor (NOVO ESTILO) -->
+        <section id="author" class="author section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Quem Está Por Trás <span class="highlight">Deste Guia?</span></h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="author__grid">
+                    <div class="author__info">
+                        <div class="bio-card">
+                            <svg class="bio-card__quote-icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-1.707 1.707A1 1 0 003 15v4a1 1 0 001 1h12a1 1 0 001-1v-4a1 1 0 00-.293-.707L16 11.586V8a6 6 0 00-6-6zM8 8a2 2 0 114 0v3.586l.293.293A1 1 0 0013 13v2H7v-2a1 1 0 00.293-.707L7.586 11.586V8z"></path></svg>
+                            <h3>Gabriel Vital</h3>
+                            <p>Especialista em marketing com inteligência artificial e criador do método <strong>"Funil Turbo IA"</strong>, que transforma empreendedores em estrategistas digitais — usando ferramentas simples e <strong class="green">sem precisar programar</strong>.</p>
+                            <ul class="credentials">
+                                <li>
+                                    <svg class="icon icon-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                                    <span>+5 anos automatizando negócios</span>
+                                </li>
+                                <li>
+                                    <svg class="icon icon-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    <span>+10.000 alunos transformados</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="author__photo-container">
+                        <div class="author__photo">
+                           <img src="assets/images/foto-gabriel-vital.jpg" alt="Foto de Gabriel Vital" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Oferta -->
+        <section id="offer" class="section">
+            <div class="container">
+                <div class="offer-box">
+                    <h2>Obtenha agora o guia completo por apenas:</h2>
+                    <div class="price-wrapper">
+                        <span class="price"><span class="symbol">R$</span>27</span>
+                    </div>
+                    <ul class="deliverables-list">
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>eBook com passo a passo detalhado.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Checklist de ferramentas e automações.</li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Acesso vitalício com atualizações.</li>
+                    </ul>
+
+                    <a href="https://pay.hotmart.com/Q100238241I" class="cta-button cta-final" target="_blank">Quero Automatizar Agora! [R$27]</a>
+                    <div class="guarantee-box">
+                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                        <h3>Garantia Incondicional de 7 Dias.</h3>
+                        <p>Se não for para você, devolvemos seu dinheiro. Sem letras miúdas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section id="final-cta" class="section">
+            <div class="container">
+                <h2>Está pronto para ter seu marketing trabalhando por <span class="highlight">você 24/7</span>?</h2>
+                <a href="https://pay.hotmart.com/Q100238241I" class="cta-button cta-final" target="_blank">Quero Automatizar Agora! [R$27]</a>
+                <p class="urgency-text">🚨 Promoção válida por tempo limitado. O preço pode subir a qualquer momento!</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container" style="padding: 40px 20px;">
+            <p>© 2025 Funil Turbo IA. Todos os direitos reservados.</p>
+            <p>Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
